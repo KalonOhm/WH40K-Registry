@@ -1,3 +1,4 @@
+id = 0
 //When clicked, the submit button will add the information to the registry form as a new line (top line)
 document.getElementById('submit').addEventListener('click', () => {
     let table = document.getElementById('roster');
