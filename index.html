@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40k Tournament Roster</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        body { padding: 30px;}
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>
+            <!-- Enter some Text Here -->
+            Warhammer 40k Tournament Application Form
+        </h1>
+    </div>
+    <br>
+    <div>
+        <h2>Armies in Tournament</h2>
+        <!-- this is where the table will go -->
+            <table class="table table-striped" id="roster">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Army</th>
+                    <th>Subfaction</th>
+                    <th>Point Cost</th>
+                    <th>Detachment</th>
+                    <th>CP</th>
+                    
+                </tr>
+        </table>
+    </div>
+    <div>
+        <h2>Enter New Armies Here:</h2>
+        <!-- i need a form here that adds the input info into a new row -->
+        <!-- Let's say I want to make the form an app for entering Warhammer armies into a tournament
+        Form entries could be: Player name (first, last), Army faction (chosen from a list of available armies),
+        Subfaction, Point cost total, Detachment type (from the list), Command Points spent pregame, -->
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="inputFirstName" class="form-label" >Player First Name</label>
+                            <input type="name" class="form-control" id="inputFirstName">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form group">
+                            <label for="inputLastName" class="form-label">Player Last Name</label>
+                            <input type="name" class="form-control" id="inputLastName">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form group">
+                            <label for="inputArmy" class="form-label">Player Faction</label>
+                            <select id="inputArmy" class="form-select">
+                                <option selected>Choose...</option>
+                                <option> Sisters of battle - Adepta Sororitas</option>
+                                <option>Adeptus Custodes</option>
+                                <option>Adeptus Mechanicus</option>
+                                <option>Imperial Guard - Astra Militarum</option>
+                                <option>Grey Knights</option>
+                                <option>Imperial Knights</option>
+                                <option>Space Marines - Adeptus Astartes</option>
+                                <option>Chaos Daemons</option>
+                                <option>Chaos Knights</option>
+                                <option>Chaos Space Marines</option>
+                                <option>Death Guard</option>
+                                <option>Thousand Sons</option>
+                                <option>Aeldari - Craftworlds Eldar</option>
+                                <option>Drukhari - Dark Eldar</option>
+                                <option>Genestealer Cults</option>
+                                <option>Necrons</option>
+                                <option>Orks</option>
+                                <option>Tau Empire</option>
+                                <option>Tyranids</option>
+                                <option>Other</option>                    
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form group">
+                            <label for="inputSubfaction" class="form-label">Army Subfaction</label>
+                            <input type="text" class="form-control" id="inputSubfaction">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form group">
+                            <label for="inputPointCost" class="form-label">Point Cost Total</label>
+                            <input type="text" class="form-control" id="inputPointCost" placeholder="2000pt limit">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form group">
+                            <label for="inputDetachment" class="form-label">Primary Detachment</label>
+                            <select id="inputDetachment" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Patrol</option>
+                                <option>Battalion</option>
+                                <option>Brigade</option>
+                                <option>Vanguard - Elites</option>
+                                <option>Spearhead - Heavy Support</option>
+                                <option>Outrider - Fast Attack</option>
+                                <option>Supreme Command</option>
+                                <option>Super-Heavy</option>
+                                <option>Super-Heavy Auxuliary</option>
+                                <option>Fortification Network</option>
+                                <option>Auxuliary Support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form group">
+                            <label for="inputCP">Remaining Command Points</label>
+                            <input type="text" class="form-control" id="inputCP">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col">
+                        <button id="submit" class="btn btn-success form-control">Submit Army to Roster</button>
+                    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
